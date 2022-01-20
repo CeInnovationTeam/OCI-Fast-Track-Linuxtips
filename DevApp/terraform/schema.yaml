@@ -1,0 +1,122 @@
+title: "Developer-Fast-Track-Fest"
+description: "Criar um ambiente de cloud native através de terraform e Resource Manager"
+schemaVersion: 1.1.0
+version: "20190304"
+locale: "pt-br"
+
+
+#################
+# Variaveis
+#################
+variableGroups:
+- title: Configuração Geral
+  visible: false
+  variables:
+  - tenancy_ocid
+  - region
+  - node_pool_boot_volume_size_in_gbs
+  - oke_compartment_description
+  - user_ocid
+  - fingerprint
+  - private_key_path
+  - network_cidrs
+  - cluster_options_admission_controller_options_is_pod_security_policy_enabled
+  - deploy_pipeline_deploy_pipeline_parameters_items_default_value
+  - deploy_pipeline_deploy_pipeline_parameters_items_description
+  - deploy_pipeline_deploy_pipeline_parameters_items_name
+  - release
+
+- title: DevOps
+  visible: true  
+  variables:
+    - compartment_id
+    - app_name
+
+- title: OKE 
+  visible: true
+  variables:
+    - num_pool_workers
+    - node_pool_shape
+    - node_pool_node_shape_config_ocpus
+    - node_pool_node_shape_config_memory_in_gbs
+
+######################
+# Variable Definitions
+######################
+
+variables:
+
+  compartment_id: 
+    type: oci:identity:compartment:id
+    title: "Compartment"
+    description: "The compartment in which to create resources"
+    required: true
+
+  app_name:
+    type: string
+    title: "Nome do Projeto"
+    required: true
+
+  num_pool_workers:
+    type: integer
+    title: "Number of Worker Nodes"
+    default: 1
+    minimum: 1
+    maximum: 1000
+    required: true
+    visible:
+      and:
+        - create_new_oke_cluster
+
+  node_pool_shape:
+    type: oci:core:instanceshape:name
+    title: "Select a shape for the Worker Nodes instances"
+    default: "VM.Standard.A1.Flex"
+    required: true
+    dependsOn:
+      compartmentId: compartment_ocid
+    visible:
+      and:
+        - create_new_oke_cluster
+
+  node_pool_node_shape_config_ocpus:
+    type: integer
+    minimum: 1
+    maximum: 64
+    default: 1
+    title: "Number of OCPUs"
+    visible:
+      and:
+        - and:
+          - create_new_oke_cluster
+        - or:
+          - eq:
+            - node_pool_shape 
+            - "VM.Standard.E3.Flex"
+          - eq:
+            - node_pool_shape 
+            - "VM.Standard.E4.Flex"
+          - eq:
+            - node_pool_shape 
+            - "VM.Standard.A1.Flex"
+
+  node_pool_node_shape_config_memory_in_gbs:
+    type: integer
+    minimum: 1
+    maximum: 1024
+    default: 16
+    title: "Amount of memory (GB)"
+    visible:
+      and:
+        - and:
+          - create_new_oke_cluster
+        - or:
+          - eq:
+            - node_pool_shape 
+            - "VM.Standard.E3.Flex"
+          - eq:
+            - node_pool_shape 
+            - "VM.Standard.E4.Flex"
+          - eq:
+            - node_pool_shape 
+            - "VM.Standard.A1.Flex"
