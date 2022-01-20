@@ -22,7 +22,7 @@ Importar as configurações de Terraform para o resource manager e executar os j
 
 1. Download
 
-Faça o download do aquivo .zip [aqui](https://github.com/ChristoPedro/fasttrackdevops/raw/main/terraform/terraform.zip).
+Faça o download do aquivo .zip [aqui](https://github.com/CeInnovationTeam/OCI-Fast-Track-Linuxtips/raw/main/DevApp/terraform/terraform.zip).
 
 2. Navegue no menu do OCI Developer Services -> Resource Manager -> Stacks
 
