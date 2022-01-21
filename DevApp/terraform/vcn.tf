@@ -153,6 +153,17 @@ resource "oci_core_security_list" "security_list_endpoint" {
         min = "12250"
         }
     }
+    ingress_security_rules {
+        description = "Path discovery"
+        icmp_options {
+            code = "4"
+            type = "3"
+        }
+        protocol    = "1"
+        source      = lookup(var.network_cidrs, "VCN-CIDR")
+        source_type = "CIDR_BLOCK"
+        stateless   = false
+  }
 }
 
 resource "oci_core_subnet" "sub_net_public" {
