@@ -4,8 +4,6 @@ metadata:
   name: my-nginx
   labels:
     app: nginx
-  annotations:
-    service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
 spec:
   replicas: 3
   selector:
@@ -28,6 +26,8 @@ metadata:
   name: my-nginx-svc
   labels:
     app: nginx
+  annotations:
+    service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
 spec:
   type: LoadBalancer
   ports:
