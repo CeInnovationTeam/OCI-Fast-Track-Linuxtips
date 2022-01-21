@@ -1,5 +1,3 @@
-![](images/Picture1.png)
-
 # Lab 4. Serviços de Armazenamento em Nuvem
 
 **Block Storage**
