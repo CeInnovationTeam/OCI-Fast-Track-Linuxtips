@@ -9,5 +9,5 @@ Material para evento OCI Fast Track Linuxtips
     - [Autonomous Database](https://github.com/CeInnovationTeam/OCI-Fast-Track-Linuxtips/blob/main/Infrastructure/AutonomousDatabase/Lab6%20-%20Autonomous%20Database.pdf)
   
 - [DevApp](/DevApp)
-- [Monitoring, Events e Notifications](https://github.com/CeInnovationTeam/OCI-Fast-Track-Linuxtips/blob/main/MonitoringEventsNotifications/Storage/README.md)
+- [Monitoring, Events e Notifications](https://github.com/CeInnovationTeam/OCI-Fast-Track-Linuxtips/blob/main/MonitoringEventsNotifications/README.md)
 - [Data & AI](/Data&AI)
