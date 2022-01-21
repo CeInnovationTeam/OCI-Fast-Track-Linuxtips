@@ -19,7 +19,7 @@ spec:
         image: nginx:latest
         ports:
         - containerPort: 80
-
+        
 ---
 
 apiVersion: v1
@@ -28,6 +28,8 @@ metadata:
   name: my-nginx-svc
   labels:
     app: nginx
+  annotations:
+    service.beta.kubernetes.io/oci-load-balancer-shape: 10Mbps
 spec:
   type: LoadBalancer
   ports:
