@@ -47,17 +47,7 @@ preencher as informações solicitadas:
  ![](images/Picture3.png)
                                                                        
  Após a configuração, o OCI começará o provisionamento. O tempo de     
- provisionamento depende do tamanho do volume.                         
-                                                                       
- ##                                                                    
-                                                                       
- ##                                                                    
-                                                                       
- ##                                                                    
-                                                                       
- ##                                                                    
-                                                                       
- ##                                                                    
+ provisionamento depende do tamanho do volume.                                                                                                                                                  
                                                                        
  **Conectando Block Volume a uma Instância de Computação**             
                                                                        
