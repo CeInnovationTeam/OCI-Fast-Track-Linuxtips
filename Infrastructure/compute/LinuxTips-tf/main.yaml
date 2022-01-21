@@ -1,0 +1,23 @@
+# Title shown in Application Information tab.
+title: "Fast Track Oracle & Linux Tips"
+# Sub Title shown in Application Information tab.
+description: "Terraform para os modulos de IAM, Network e Compute"
+schemaVersion: 1.1.0
+version: "1.0"
+
+logoUrl:
+locale: "en"
+variableGroups:
+  - title: "Insira sua chave aqui!"
+    variables:
+      - ${ssh_public_key}
+
+variables:
+  ssh_public_key:
+    type: string
+    required: true
+    title: Conteúdo do arquivo id_rsa.pub
+  tenancy_ocid:
+    type: string
+    title: Não altere o seguinte valor!
+    visible: false
