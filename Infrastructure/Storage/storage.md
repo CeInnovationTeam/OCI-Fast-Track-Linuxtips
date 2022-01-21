@@ -1,4 +1,4 @@
-![](media/item_1.png){width="8.314814085739282in"
+![](media/item 1.png){width="8.314814085739282in"
 height="4.677083333333333in"}
 
 # Lab 4. Serviços de Armazenamento em Nuvem
