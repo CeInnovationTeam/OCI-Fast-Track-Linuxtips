@@ -1,5 +1,5 @@
 # **Este é o guia para o Lab de Data & AI**
-Caso você esteja chegando atrasado para este Lab e não pegou o início da sessão clique [aqui](/Cheguei_Atrasado/readme.md)
+Caso você esteja chegando atrasado para este Lab e não pegou o início da sessão clique [aqui](https://github.com/CeInnovationTeam/OCI-Fast-Track-Linuxtips/blob/main/Data%26AI/Cheguei_Atrasado/readme.md)
 
 
 ## **Pré-requisitos**

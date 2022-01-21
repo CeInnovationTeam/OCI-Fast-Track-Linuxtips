@@ -1,5 +1,5 @@
 # **Este é o guia para o Lab de Data & AI para aqueles que chegaram atrasados na sessão**
-Caso você não esteja atrasado acompanhe o guia complexo do Lab [aqui](./data_ai/readme.md)
+Caso você não esteja atrasado acompanhe o guia complexo do Lab [aqui](https://github.com/CeInnovationTeam/OCI-Fast-Track-Linuxtips/tree/main/Data%26AI#readme)
 
 **Resource Manager**
 
