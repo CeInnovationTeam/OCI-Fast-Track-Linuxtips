@@ -281,13 +281,39 @@ Objetivo
                                                                        
 ![](images/Picture16.png)                                                    
                                                                        
- **PASSO 3** -- Crie o Bucket com as seguintes configurações:          
+ **PASSO 3** -- Crie os Buckets com as seguintes configurações:          
                                                                        
  > **Bucket Name**: bucket-site                                        
  >                                                                     
  > **Default Storage Tier**: Standard                                  
  >                                                                     
- > **Enable Object Versioning**: V                                     
+ > **Enable Object Versioning**: V    
+
+
+
+ > **Bucket Name**: dataflow-logs                                    
+ >                                                                     
+ > **Default Storage Tier**: Standard                                  
+ >                                                                     
+ > **Enable Object Versioning**: V 
+
+
+
+ > **Bucket Name**: dataflow-warehouse
+ >                                                                     
+ > **Default Storage Tier**: Standard                                  
+ >                                                                     
+ > **Enable Object Versioning**: V 
+
+
+
+ > **Bucket Name**: raw-data
+ >                                                                     
+ > **Default Storage Tier**: Standard                                  
+ >                                                                     
+ > **Enable Object Versioning**: V 
+
+
                                                                        
 ![](images/Picture17.png)     
                                                                        
