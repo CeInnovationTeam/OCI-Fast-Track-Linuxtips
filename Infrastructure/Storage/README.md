@@ -12,7 +12,7 @@ Objetivos
 Você pode criar volumes de Block Storage por meio da interface "Block
 Storage".
 
-# [EXERCÍCIO 4A: Criando um volume de Block Storage]
+# [EXERCÍCIO 4: Criando um volume de Block Storage]
 **PASSO 1 -** Para acessá-lo: No menu principal, você escolhe Block   
 Storage, depois "Block Volume".                                       
                                                                       
