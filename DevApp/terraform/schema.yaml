@@ -71,7 +71,7 @@ variables:
   node_pool_shape:
     type: oci:core:instanceshape:name
     title: "Select a shape for the Worker Nodes instances"
-    default: "VM.Standard.A1.Flex"
+    default: "VM.Standard.E3.Flex"
     required: true
     dependsOn:
       compartmentId: compartment_ocid
