@@ -336,4 +336,4 @@ Objetivo
                                                                        
  Seu site está pronto, agora basta fazer o apontamento em seu DNS      
 
-![](images/Picture25.png)  
+![](images/Picture26.png)  
