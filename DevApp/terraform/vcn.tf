@@ -75,6 +75,18 @@ resource "oci_core_security_list" "security_list_private" {
         source_type = "CIDR_BLOCK"
         stateless   = false
     }
+    ingress_security_rules {
+        protocol    = "6"
+        source      = lookup(var.network_cidrs, "ALL-CIDR")
+        description = "Allow SSH"
+        source_type = "CIDR_BLOCK"
+        stateless   = false
+
+        tcp_options {
+        max = "22"
+        min = "22"
+        }
+    }
 }
 
 resource "oci_core_security_list" "security_list_public" {
