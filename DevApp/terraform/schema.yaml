@@ -55,6 +55,8 @@ variables:
   app_name:
     type: string
     title: "Nome do Projeto"
+    pattern: ^[a-zA-Z0-9]{1,30}$
+    description: "Não utilize espaço ou carácter especial."
     required: true
 
   num_pool_workers:
