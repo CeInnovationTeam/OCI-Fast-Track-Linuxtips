@@ -363,3 +363,104 @@ Objetivo
  Seu site está pronto, agora basta fazer o apontamento em seu DNS      
 
 ![](images/Picture26.png)  
+
+
+
+# Lab 6. Serviço de File Storage
+
+**File Storage**
+
+O servi o OCI File Storage oferece um sistema de arquivos de 
+rede de n vel empresarial duravel, escalonavel e seguro. 
+Voce pode se conectar a um sistema de arquivos de servico de
+armazenamento de arquivos a partir de qualquer bare metal, 
+maquina virtual ou instancia de container em sua VCN. 
+Voce tambem pode acessar um sistema de arquivos de fora do VCN
+usando o Oracle Cloud Infrastructure FastConnect e a VPN com 
+segurança do protocolo da Internet (IPSec).
+
+O uso do servico de armazenamento de arquivos requer a compreensao 
+dos seguintes conceitos, incluindo alguns que pertencem ao 
+Oracle Cloud Infrastructure Networking:
+
+-   Mount Target:
+    Um endpoint NFS que reside em uma sub-rede de sua escolha e possui alta disponibilidade. 
+    O Mount Target fornece o endere o IP ou nome DNS que é usado no comando de montagem para 
+    conectar NFS clients a um File System. Um único Mount Targent pode servir como endpoint 
+    de muitos File Systems.
+
+-   Export:
+   O Export controla como os clientes NFS acessam os File Systems quando se conectam a um 
+   Mount Target. 
+   Os File Systems são exportados (disponibilizados) por meio de Mount Targets. 
+   Cada Mount Target mantém um conjunto de exportaçõs que contém uma ou várias exportações.
+
+
+Objetivos
+
+> • Criar um FileStorage Service File System, e acessa-lo através de uma instância Linux.
+
+**Criando um File Storage Service File System**
+
+# [EXERCÍCIO 6: Criando um volume de File Storage]
+**PASSO 1 -** Acesse a tela de FileStorage através de Storage>File Storage.                                       
+                                                                      
+![](images/fs01.png)
+                                                                      
+**PASSO 2 -** Clique em create file system:    
+
+![](images/fs02.png)
+
+**PASSO 3 -** Clique em create file system: 
+
+Você verá uma tela pop-up solicitando as principais informações 
+para identificar o FileStorage Service. Use o botão editar.
+
+![](images/fs03.png)
+
+![](images/fs04.png)
+
+**PASSO 4 -** Selecione sua VCN e a Sub-rede Pública:
+
+![](images/fs05.png)
+
+![](images/fs06.png)
+
+**PASSO 5 -** Libere as regras de firewall:
+
+Observe que FileStorage é um serviço de rede e, como tal, seu uso está subordinado as regras de firewall. 
+Para montar o Mount Target criado, vamos criar uma regra de segurança (Security Rule) de entrada (Ingress), 
+para permitir o tráfego IP do serviço FileStorage.
+
+![](images/fs07.png)
+
+Selecione a subnet onde o Mount Target foi anexado.
+Em: Menu principal >Networking > Virtual Cloud Networks, Clique em sua VCN e 
+depois selecione a Subnet onde o Mount Target foi anexado, “Public Subnet”.
+Clique em “Default Security List” e depois clique no botão “Add Ingress Rules” 
+e crie as regras de entrada abaixo:
+
+![](images/fs12.png)
+
+**PASSO 6 -** Menu Exports:
+
+Selecione o Mount Target criado através do menu principal >File Storage> Mount Target, no menu de ações “Export’s”,
+selecione “Mount Commands” e você terá informações de montagem:
+
+![](images/fs08.png)
+
+![](images/fs09.png)
+
+**PASSO 7 -** Montagem no GNU/Linux:
+
+Acesse sua VM Linux criada e execute o comando de montagem disponibilizado pelo OCI. 
+Após os commandos de montage verifique o file storage contendo 8E 
+disponível através do comando "df -h".
+
+![](images/fs10.png)
+
+![](images/fs11.png)
+
+
+
+
