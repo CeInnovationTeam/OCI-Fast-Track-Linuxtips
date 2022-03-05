@@ -4,7 +4,7 @@
 
 Objetivos
 
-> • Crie um volume de Block Storage de 50GB e anexe o Block Storage a
+> • Crie um volume de Block Storage de 500GB e anexe o Block Storage a
 > uma Instância de Computação
 
 **Criando volumes de Block Storage**
