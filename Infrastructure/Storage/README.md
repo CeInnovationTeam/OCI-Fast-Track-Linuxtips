@@ -362,7 +362,7 @@ Objetivo
                                                                        
  Seu site está pronto, agora basta fazer o apontamento em seu DNS      
 
-![](images/Picture26.png)  
+![](images/objstorage.png)
 
 
 
